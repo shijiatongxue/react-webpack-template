@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "outDir": "./dist",
+        "sourceMap": true,
+        "allowJs": true,
+        "module": "es6",
+        "target": "es6",
+        "jsx": "react",
+        "moduleResolution": "Node",
+        "noImplicitAny": true,
+        "forceConsistentCasingInFileNames": true,
+        "importHelpers": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["node_modules"]
+}
