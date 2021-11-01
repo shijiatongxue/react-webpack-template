@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.tsx",
   "repository": "https://github.com/shijiatongxue/react-webpack-template.git",
-  "author": "石嘉 <shijia.me@bytedance.com>",
+  "author": "走鹃 <imshijia@163.com>",
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development webpack serve",
