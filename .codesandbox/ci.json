@@ -1,0 +1,4 @@
+{
+    "node": "14",
+    "sandboxes": ["oubej", "/.codesandbox/examples/pr-story"]
+}
