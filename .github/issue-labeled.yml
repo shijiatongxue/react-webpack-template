@@ -1,0 +1,19 @@
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  create-comment:
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'Needs More Information'
+    steps:
+      - name: 'Needs More Information'
+        uses: actions-cool/issues-helper@v2
+        with:
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Hello ${{ github.event.issue.user.login }}. We have received it, but we need you to provide more relevant background, reproduction code, software environment and other information, which will help us quickly locate and solve the problem.
+
+            你好 ${{ github.event.issue.user.login }}。我们已收到，但需要您提供更多的相关背景、复现代码、软件环境等信息，这会帮助我们快速定位和排查问题。
