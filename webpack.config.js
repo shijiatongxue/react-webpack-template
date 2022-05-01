@@ -1,6 +1,8 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const HelloWorldPlugin = require('./packages/hello-world-webpack-plugin').default;
+const ConsoleChangedFileWebpackPlugin = require('./packages/console-changed-file-webpack-plugin').default;
 const path = require('path');
 
 module.exports = {
@@ -22,7 +24,9 @@ module.exports = {
             template: resolve('./src/index.html')
         }),
         new CleanWebpackPlugin(),
-        new FriendlyErrorsWebpackPlugin()
+        new FriendlyErrorsWebpackPlugin(),
+        new HelloWorldPlugin(),
+        new ConsoleChangedFileWebpackPlugin(),
     ],
     module: {
         rules: [
@@ -78,8 +82,8 @@ module.exports = {
         static: {
             directory: path.join(__dirname, 'dist')
         },
-        port: 3000,
-        open: false,
+        port: 3001,
+        open: true,
         hot: true,
         compress: true,
     }
